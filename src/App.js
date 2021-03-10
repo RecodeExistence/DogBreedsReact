@@ -33,8 +33,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <RandomFact fact={this.state.fact}/>
      	<CardList dogBreeds={this.state.dogBreeds} />
+      <RandomFact fact={this.state.fact}/>
       </div>
     )
   }
