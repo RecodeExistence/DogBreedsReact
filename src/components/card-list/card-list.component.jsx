@@ -9,4 +9,4 @@ export const CardList = props => (
         <Card key={dog.id} dog={dog} url={dog.image.url} bred_for={dog.bred_for}/>
     ))}
     </div>
-)
+); 
