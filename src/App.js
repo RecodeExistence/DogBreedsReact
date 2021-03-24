@@ -20,11 +20,21 @@ class App extends Component {
       .then((dogBreeds) => this.setState({ dogBreeds: dogBreeds }));
   }
   render() {
-	  const { dogBreeds, searchValue } = this.state;
-	  const filteredDogs = dogBreeds.filter(dog => dog.name.toLowerCase().includes(searchValue.toLowerCase()));  
+    const { dogBreeds, searchValue } = this.state;
+    const filteredDogs = dogBreeds.filter((dog) =>
+      dog.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
     return (
       <div className="App">
-	  	<input type="search" placeholder="Search Dog Breed" onChange={e => this.setState({searchValue : e.target.value})} />
+        <input
+          type="search"
+          placeholder="Search breed by name..."
+          onChange={(e) => {
+            this.setState({ searchValue: e.target.value }, () =>
+              console.log(this.searchValue)
+            );
+          }}
+        />
         <CardList dogBreeds={filteredDogs} />
       </div>
     );
