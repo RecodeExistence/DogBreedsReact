@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 import { CardList } from "./components/card-list/card-list.component";
-
+import { SearchBox } from "./components/searchbox/searchbox.component"
 class App extends Component {
   constructor() {
     super();
@@ -26,15 +26,11 @@ class App extends Component {
     );
     return (
       <div className="App">
-        <input
-          type="search"
-          placeholder="Search breed by name..."
-          onChange={(e) => {
-            this.setState({ searchValue: e.target.value }, () =>
-              console.log(this.searchValue)
-            );
-          }}
-        />
+	  <SearchBox 
+	  	placeholder="Search by breed"
+		handleSearchValueChange={e => this.setState({ searchValue : e.target.value}, () => console.log(this.state.searchValue))}
+	/>
+        
         <CardList dogBreeds={filteredDogs} />
       </div>
     );
