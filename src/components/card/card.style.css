@@ -1,9 +1,9 @@
 .card-container {
     display: flex;
     flex-direction: column;
-    background-color: #95dada;
-    border: 1px solid grey;
-    border-radius: 5px;
+    background-color: #5AA658;
+    border: 3px solid white;
+    border-radius: 25px;
     padding: 25px;
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
@@ -17,6 +17,9 @@
   }
 
   .dogImg {
-    margin: 0 auto; 
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 200px; 
+    width: 250px;  
   }
   
